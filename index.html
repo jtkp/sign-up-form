@@ -10,8 +10,6 @@
 <body>
     <div id="sidebar">
         <div id="title">
-            <!-- add transparent background -->
-            <!-- logo -->
             <img src="transparent-square icon only.png" alt="prg logo">
             <h1>DOG</h1>
         </div>
@@ -24,11 +22,46 @@
             aliquid tempore aliquam amet illo voluptates? Cumque mollitia eveniet 
             beatae, magnam maiores labore.
         </p>
-        <div class="form">
+        <div id="container">
+            <p>Let's do this!</p>
+            <form id="myform" method="post">
+                <div class="box">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" required>
+                    <span></span>
+                </div>
+                <div class="box">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" required>
+                    <span></span>
+                </div>
+                <div class="box">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                    <span></span>
+                </div>
+                <div class="box">
+                    <label for="phone">Phone Number</label>
+                    <span></span>
+                    <input type="number" id="phone">
+                </div>
+                <div class="box">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                    <span></span>
+                </div>
+                <div class="box">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+                    <span></span>
+                </div>
+            
+            </form>
 
         </div>
-        <button>Create Account</button>
+        <button type="submit" form="myform">Create Account</button>
         <!-- already have an account? Log in -->
     </div>
+    <script src="index.js"></script>
 </body>
 </html>

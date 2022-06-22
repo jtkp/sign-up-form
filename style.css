@@ -8,7 +8,43 @@
 body {
     display: flex;
     height: 100vh;
+    font-family: Roboto;
+    background-color: #f0eded;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type='text']:invalid,
+input[type='email']:invalid,
+input[type='password']:invalid {
+  border: 1px solid #D55C5F;
+  color: #D55C5F;
+  box-shadow: none; /* Remove default red glow in Firefox */
+}
+
+input + span {
+    position: relative;
+  }
+  
+input:required + span::after {
+    font-size: 0.7rem;
+    position: absolute;
+    content: "required";
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    top: -50px;
+    left: 170px;
+}
+  
 
 #sidebar {
     display: flex;
@@ -48,7 +84,42 @@ body {
 
 #info {
     display: flex;
+    flex: 1 0 auto;
     flex-direction: column;
     justify-content: center;
+}
 
+#info > p {
+    width: 700px;
+    margin: 40px 30px;
+}
+
+#container {
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);
+    padding: 20px 30px;
+}
+
+#container p{
+    margin-bottom: 20px;
+}
+
+button {
+    flex: 0;
+    width: 180px;
+    margin: 25px 30px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    margin-right: 40px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    gap: 20px;
 }
